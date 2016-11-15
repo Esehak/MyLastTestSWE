@@ -29,8 +29,27 @@ public class EmployeeServiceImpl implements EmployeeService  {
 	}
 
 	@Override
-	public Employee getEmployeeByNumber (int employeeNumber) {
+	public Employee getEmployeeByNumber (Long employeeNumber) {
 		return employeeRepository.locateOneEmployeeByHisNumber(employeeNumber);
+	}
+
+	@Override
+	public Employee findByName(String employeeFirstName) {
+		// TODO Auto-generated method stub
+		return employeeRepository.locateOneEmployeebyHisFirstName(employeeFirstName);
+	}
+
+	@Override
+	public void update(Employee employee) {
+		 employeeRepository.save(employee);
+		
+		
+	}
+
+	@Override
+	public void delete(Long id) {
+		employeeRepository.delete(id);;
+		
 	}
 	
 }

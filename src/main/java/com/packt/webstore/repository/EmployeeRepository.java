@@ -12,5 +12,13 @@ import com.packt.webstore.domain.Employee;
 	public interface EmployeeRepository extends  CrudRepository<Employee, Long> 
 	{
 		@Query("select e from Employee  e where e.employeeNumber= :employeeNumber")
-		public Employee locateOneEmployeeByHisNumber(@Param("employeeNumber") int employeeNumber);
- 	}
+		public Employee locateOneEmployeeByHisNumber(@Param("employeeNumber") Long employeeNumber);
+
+		
+		@Query("select e from Employee  e where e.firstName= :firstName")
+		public Employee locateOneEmployeebyHisFirstName(@Param("firstName") String firstName);
+		
+	
+	}
+	
+	

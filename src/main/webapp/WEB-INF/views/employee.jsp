@@ -13,10 +13,12 @@
 		<div class="jumbotron">
 			<div class="container">
 				<img src="<spring:url value='/resource/images/kemosabes.jpg' />" />
-				<h1>Our Employee</h1>
-				<p>Contributor to our Community!!!</p>
+				<h1>An Employee</h1>
+				<p>Employee by his first Name!!!</p>
 			</div>
-						<a href="<c:url value="/event/add" />" class="btn btn-danger btn-mini pull-right">Add a new event</a>	
+			
+			<a href="<c:url value="/employees/add" />" class="btn btn-danger btn-mini pull-right">Add a new Employee</a>
+						
  			
 		</div>
 	</section>
@@ -26,8 +28,8 @@
 				<div class="col-sm-6 col-md-3" style="padding-bottom: 15px">
 					<div class="thumbnail">
  						<div class="caption">
-							<h3>First Name - ${employee.title}</h3>
-							<h3>Last Name -  ${employee.name}</h3>
+							<h3>First Name - ${employee.firstName}</h3>
+							<h3>Last Name - ${employee.lastName}</h3>
 							<p>Age -         ${employee.age}</p>
 							<p>Title -       ${employee.title} </p>
 							<p>NUMBER -      ${employee.employeeNumber} </p>

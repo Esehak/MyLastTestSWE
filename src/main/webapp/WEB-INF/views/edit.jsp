@@ -18,15 +18,25 @@
 		</div>
 	</section>
 	<section class="container">
-		<form:form  modelAttribute="newEmployee" class="form-horizontal"  >
+		<form:form  modelAttribute="employee" action="update" class="form-horizontal"  >
 			<fieldset>
-				<legend>Add new employee</legend>
+				<legend>Edit employee</legend>
 
 				<form:errors path="*" cssClass="alert alert-danger" element="div"/>
+				
+				<div class="form-group">
+					<div class="col-lg-10">
+						<form:hidden path="id"   class="form:input-large"/>
+						
+					</div>
+				</div>
+				
+				
 				<div class="form-group">
 					<label class="control-label col-lg-2 col-lg-2" for="employeeNumber"> Employee Number</label>
 					<div class="col-lg-10">
-						<form:input id="employeeNumber" path="employeeNumber" type="number" class="form:input-large"/>
+					
+						<form:input id="employeeNumber" path="employeeNumber" type="text" class="form:input-large"/>
 						<form:errors path="employeeNumber" cssClass="text-danger"/>
 					</div>
 				</div>
@@ -102,7 +112,7 @@
 
 				<div class="form-group">
 					<div class="col-lg-offset-2 col-lg-10">
-						<input type="submit" id="btnAdd" class="btn btn-primary" value ="Add"/>
+						<input type="submit" id="btnAdd" class="btn btn-primary" value ="update"/>
 					</div>
 				</div>
 				
@@ -110,4 +120,4 @@
 		</form:form>
 	</section>
 </body>
-</html>
+</html> 

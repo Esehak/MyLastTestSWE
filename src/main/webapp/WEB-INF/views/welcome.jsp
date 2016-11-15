@@ -11,12 +11,12 @@
 	<section>
 		<div class="jumbotron">
 			<div class="container">
-				<img src="<spring:url value='/resource/images/loneRanger.jpg' />" />
+				<%-- <img src="<spring:url value='/resource/images/loneRanger.jpg' />" /> --%>
 				<h1> ${greeting} </h1>
 				<p> ${tagline} </p>
 			</div>	 
  
-				  <a href="<c:url value="/employees/add" />" class="btn btn-danger btn-mini pull-right">Add a new event</a>
+				  <a href="<c:url value="/employees/add" />" class="btn btn-danger btn-mini pull-right">Add a new Employee</a>
 		</div>	
 	</section>
 	

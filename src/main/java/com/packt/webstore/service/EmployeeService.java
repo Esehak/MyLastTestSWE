@@ -11,5 +11,10 @@ public interface EmployeeService {
 
 	public void save(Employee employee);
 	public List<Employee> findAll();
-	public Employee getEmployeeByNumber (int employeeNumber);
+	public Employee getEmployeeByNumber (Long id);
+	public Employee findByName(String resourceName);
+	public void update(Employee employee);
+	public void delete(Long id);
+	
+	
 }

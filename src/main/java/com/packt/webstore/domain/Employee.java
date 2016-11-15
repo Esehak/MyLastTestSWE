@@ -17,7 +17,7 @@ public class Employee {
 
    @Id
    @GeneratedValue(strategy=GenerationType.AUTO)
- 	private int id;
+ 	private Long id;
 	
    @Column(name= "firstName")
 	private String firstName;
@@ -32,16 +32,16 @@ public class Employee {
 	private String title;
    
    @Column(name="employeeNumber")
-	private int employeeNumber;
+	private Long employeeNumber;
 	
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name="adddressid")
 	private Address address;
 	
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getFirstName() {
@@ -68,14 +68,19 @@ public class Employee {
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	public int getEmployeeNumber() {
+	public Long getEmployeeNumber() {
 		return employeeNumber;
 	}
-	public void setEmployeeNumber(int employeeNumber) {
+	public void setEmployeeNumber(Long employeeNumber) {
 		this.employeeNumber = employeeNumber;
 	}
 	
- 	public Address getAddress() {
+ 	@Override
+	public String toString() {
+		return "Employee [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", age=" + age
+				+ ", title=" + title + "]";
+	}
+	public Address getAddress() {
 		return address;
 	}
 	public void setAddress(Address address) {
